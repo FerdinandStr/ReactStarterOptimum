@@ -1,0 +1,28 @@
+.Layout{
+    max-width: 600px;
+    margin: auto;
+}
+
+.HeaderCard{
+    background-color: blueviolet;
+    height: 60px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+    display: flex;
+    border-radius: 100px;
+
+}
+
+.HeaderBox{
+    flex: 1 1 auto;
+    text-align: center;
+    margin:auto;
+}
+
+.HomeHeaderContent{
+    color: #FFF;
+    font-size: 1.2em;
+}
+
+.AppView{
+    margin: 25px 0;
+}

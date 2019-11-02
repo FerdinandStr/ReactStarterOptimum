@@ -21,9 +21,10 @@ module.exports = env => {
                     use: ["style-loader", {
                         loader: "css-loader",
                         options: {
-                            modules: true,
+                            modules: {
+                                localIdentName: "[local]_[hash:base64:4]"
+                            },
                             importLoaders: 1,
-                            localIdentName: "[local]_[hash:base64:4]"
                         }
                     }],
                 },
@@ -33,7 +34,13 @@ module.exports = env => {
                 // },
             ]
         },
+        resolve: {
+            alias: {
+                'react-dom': '@hot-loader/react-dom',
+            },
+        },
         devServer: {
+            historyApiFallback: true,
             port: 8081,
             hot: true,
             compress: true,

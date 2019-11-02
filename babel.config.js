@@ -9,13 +9,14 @@ const presets = [
         safari: "11.1",
       },
       useBuiltIns: "usage",
+      corejs: 3,
     },
   ],
   "@babel/preset-react"
 ];
 const plugins = [
-  ["react-css-modules", { "generateScopedName": "[local]_[hash:base64:4]" }],
+  ["react-css-modules", { "generateScopedName": "[local]_[hash:base64:4]", "webpackHotModuleReloading": true, "autoResolveMultipleImports": true }],
   ["react-hot-loader/babel"]
 ]
 
-module.exports = { presets };
+module.exports = { presets, plugins };

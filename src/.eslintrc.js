@@ -1,3 +1,8 @@
+/* 
+    Add this to VS Code Settings => 
+    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": true,
+*/
 module.exports = {
     "env": {
         "browser": true,
@@ -13,9 +18,12 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
     ],
     "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "indent": [
             "error",
             4
@@ -25,12 +33,12 @@ module.exports = {
             "windows"
         ],
         "quotes": [
-            "warning",
-            "double"
+            "error",
+            "single"
         ],
         "semi": [
             "error",
             "never"
-        ]
+        ],
     }
 };
